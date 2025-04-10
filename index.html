@@ -1,95 +1,74 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dąb Dobry - Sprzedaż drewna dębowego</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-        }
-        h2 {
-            color: #333;
-        }
-        p {
-            color: #555;
-        }
-        ul {
-            list-style-type: square;
-            color: #333;
-        }
-        a {
-            color: #1a73e8;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dąb Dobry</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <h1>Dąb Dobry</h1>
+    <nav>
+      <ul>
+        <li><a href="#o-nas">O nas</a></li>
+        <li><a href="#dab">Dąb</a></li>
+        <li><a href="#oferta">Oferta</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header>
-        <h1>Dąb Dobry - Sprzedaż drewna dębowego</h1>
-    </header>
-
+  <main>
     <section id="o-nas">
-        <h2>O nas</h2>
-        <p>
-            Jesteśmy małym gospodarstwem domowym z dostępem do prywatnego lasu. Po dokonaniu wycinki drzew oferujemy na sprzedaż drewno dębowe w postaci brusu o różnych grubościach. Zajmujemy się sprzedażą drewna dębowego, które charakteryzuje się wyjątkową twardością, estetyką i trwałością. Nasze drewno jest idealne do produkcji mebli, podłóg oraz innych zastosowań budowlanych.
-        </p>
+      <h2>O nas</h2>
+      <p>Jesteśmy małym gospodarstwem z prywatnym lasem. W ramach hobby na emeryturze właściciel zajmuje się sprzedażą drzewa po wycince.</p>
     </section>
 
-    <section id="o-dabach">
-        <h2>O dębach</h2>
-        <img src="https://tse2.mm.bing.net/th?id=OIP.Av3k-dynG114mc8w0AIsTAHaHa&pid=Api" alt="Dąb w lesie" width="500">
-        <p>
-            Dąb (Quercus) to drzewo, które od wieków cieszy się ogromnym uznaniem. Jego drewno jest uważane za jedno z najlepszych, zarówno pod względem trwałości, jak i estetyki. Charakteryzuje się wyjątkową twardością i odpornością na uszkodzenia, co czyni je idealnym materiałem do produkcji mebli, podłóg, a także elementów budowlanych.
-        </p>
-        <h3>Właściwości drewna dębowego:</h3>
-        <ul>
-            <li>Wysoka twardość i wytrzymałość</li>
-            <li>Odporność na wilgoć i zmienne warunki atmosferyczne</li>
-            <li>Piękny, charakterystyczny rysunek słojów</li>
-        </ul>
-        <h3>Zastosowanie drewna dębowego:</h3>
-        <ul>
-            <li>Meble i stolarka</li>
-            <li>Podłogi i parkiety</li>
-            <li>Elementy konstrukcyjne w budownictwie</li>
-            <li>Beczkowanie wina</li>
-        </ul>
-        <p>
-            Dąb to drzewo, które nie tylko zapewnia wysoką jakość drewna, ale również pełni ważną rolę w ekosystemie, chroniąc glebę przed erozją i stanowiąc schronienie dla wielu gatunków zwierząt.
-        </p>
+    <section id="dab">
+      <h2>Dąb</h2>
+      <img src="img/dab.jpg" alt="Dąb" />
+      <p>Dąb to jedno z najcenniejszych drzew liściastych. Rośnie nawet kilkaset lat, preferując żyzne gleby i umiarkowany klimat. Drewno dębowe jest trwałe, odporne na warunki atmosferyczne i ma piękny rysunek słojów. Wykorzystywane jest w meblarstwie, budownictwie i rzemiośle artystycznym.</p>
+    </section>
+
+    <section id="oferta">
+      <h2>Oferta</h2>
+      <img src="img/brusy.jpg" alt="Brusy dębowe" />
+      <p>Oferujemy brusy w różnych grubościach i długościach. Cena za jeden kubik: <strong>1500 zł</strong>. Przy większych zamówieniach wycena indywidualna. Zachęcamy do wysyłania zapytań!</p>
+    </section>
+
+    <section id="galeria">
+      <h2>Galeria</h2>
+      <div class="gallery">
+        <img src="img/brusy.jpg" alt="Brusy 1" />
+        <img src="img/skladowane_drewno.jpg" alt="Brusy 2" />
+        <img src="img/dab.jpg" alt="Dąb" />
+      </div>
     </section>
 
     <section id="kontakt">
-       <h2>Zygmunt Szmigiel +48 509 183 694 </h2>
-       <h2>Email: dab.dobry@gmail.com </h2>
-        <h2>Nasza lokalizacja</h2>
-        <p>Odwiedź nas w naszym gospodarstwie! Znajdziesz nas w poniższej lokalizacji na mapie:</p>
-        <a href="https://maps.app.goo.gl/gJPUSzzzR4JqNDjP8" target="_blank">
-            Kliknij tutaj, aby zobaczyć naszą lokalizację na mapie Google
-        </a>
-    </section>
+      <h2>Kontakt</h2>
+      <p>Zygmunt Szmigiel<br>
+         Tel: +48 321 123 123<br>
+         Email: <a href="mailto:dab.dobry@gmail.com">dab.dobry@gmail.com</a></p>
 
+      <iframe src="https://maps.google.com/maps?q=https://maps.app.goo.gl/oTscpKeUtpTaXR9P9&output=embed" width="100%" height="300" style="border:0;"></iframe>
+
+      <form action="mailto:dab.dobry@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Imię:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Wiadomość:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+        <input type="submit" value="Wyślij">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Dziękujemy za odwiedzenie naszej strony i zapoznanie się z ofertą.</p>
+  </footer>
 </body>
 </html>
