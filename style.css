@@ -1,4 +1,8 @@
-/* Resetowanie marginesów i czcionka */
+/* Reset i ogólne ustawienia */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,7 +15,7 @@ body {
 header {
   background-color: #6b4c2f;
   color: white;
-  padding: 2rem;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
@@ -21,23 +25,26 @@ header h1 {
 }
 
 header p {
-  margin: 0.5rem 0 0;
+  margin-top: 0.5rem;
   font-size: 1.2rem;
 }
 
-/* Nawigacja */
+/* Pasek nawigacyjny */
 nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   background-color: #8d6e50;
-  padding: 0.5rem;
-  flex-wrap: wrap;
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0.5rem 1rem;
+  margin: 0.5rem;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background-color 0.3s ease;
@@ -49,7 +56,7 @@ nav a:hover {
 
 /* Sekcje */
 section {
-  padding: 2rem;
+  padding: 2rem 1rem;
   max-width: 1200px;
   margin: auto;
 }
@@ -57,7 +64,7 @@ section {
 /* Galeria zdjęć */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -66,27 +73,27 @@ section {
   width: 100%;
   height: auto;
   max-width: 100%;
-  display: block;
   object-fit: cover;
-  border-radius: 6px;
-  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
 .gallery img:hover {
   transform: scale(1.02);
+  cursor: pointer;
 }
 
-/* Lista */
+/* Listy */
 ul {
   padding-left: 1.2rem;
 }
 
-/* Kontakt */
+/* Kontakt i mapa */
 .contact iframe {
   width: 100%;
   height: 300px;
-  border: 0;
+  border: none;
   margin-top: 1rem;
 }
 
@@ -97,4 +104,28 @@ footer {
   color: white;
   padding: 1rem;
   font-size: 0.9rem;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 0.3rem 0;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
 }
