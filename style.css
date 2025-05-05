@@ -2,7 +2,9 @@
 * {
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -31,27 +33,29 @@ header p {
 
 /* Pasek nawigacyjny */
 nav {
+  background-color: #3b2f1c;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  background-color: #8d6e50;
-  padding: 0.5rem 1rem;
+  flex-wrap: wrap;
+  padding: 10px;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  padding: 10px 15px;
+  margin: 5px;
+  font-weight: bold;
   transition: background-color 0.3s ease;
+  white-space: nowrap;
 }
 
 nav a:hover {
-  background-color: #a98263;
+  background-color: #5b4529;
+  border-radius: 5px;
 }
 
 /* Sekcje */
