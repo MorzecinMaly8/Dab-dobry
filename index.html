@@ -5,6 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dąb – Morzęcin</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    nav {
+      background-color: #3b2f1c;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+      margin: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      white-space: nowrap;
+    }
+    nav a:hover {
+      background-color: #5b4529;
+      border-radius: 5px;
+    }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      nav a {
+        margin: 5px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -77,42 +114,32 @@
     <p><strong>Adres:</strong> Morzęcin Mały ul. Wiśniowa 8, 55-120 Oborniki Śląskie</p>
     <p><strong>Telefon:</strong> +48 509 183 694</p>
     <p><strong>Email:</strong> szmigielzygmunt@gmail.com</p>
-    <iframe src="https://www.google.com/maps?q=Morzęcin+Mały+ul.+Wisiowa+8,+55-120+Oborniki+Śląskie&output=embed" allowfullscreen loading="lazy"></iframe>
+    <iframe src="https://www.google.com/maps?q=Morzęcin+Mały+ul.+Wiśniowa+8,+55-120+Oborniki+Śląskie&output=embed" allowfullscreen loading="lazy"></iframe>
   </section>
 
   <footer>
     &copy; 2025 Dąb – Dobry. Wszelkie prawa zastrzeżone.
   </footer>
-  <!-- LIGHTBOX -->
-<div id="lightbox">
-  <img src="" alt="powiększone zdjęcie">
-</div>
 
-<script>
-  const galleryImages = document.querySelectorAll('.gallery img');
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = lightbox.querySelector('img');
+  <div id="lightbox" style="display: none; position: fixed; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; z-index: 9999;">
+    <img src="" alt="powiększone zdjęcie" style="max-width: 90%; max-height: 90%;">
+  </div>
 
-  galleryImages.forEach(img => {
-    img.addEventListener('click', () => {
-      lightbox.style.display = 'flex';
-      lightboxImg.src = img.src;
-    });
-  });
-
-  lightbox.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-  });
-</script>
   <script>
-  document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
+    const galleryImages = document.querySelectorAll('.gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
       });
     });
-  });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
   </script>
 </body>
 </html>
