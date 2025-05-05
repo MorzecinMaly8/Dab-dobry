@@ -83,5 +83,26 @@
   <footer>
     &copy; 2025 Dąb – Dobry. Wszelkie prawa zastrzeżone.
   </footer>
+  <!-- LIGHTBOX -->
+<div id="lightbox">
+  <img src="" alt="powiększone zdjęcie">
+</div>
+
+<script>
+  const galleryImages = document.querySelectorAll('.gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+</script>
 </body>
 </html>
