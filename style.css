@@ -160,3 +160,9 @@ footer {
     height: 200px;
   }
 }
+/* Styl zmniejszonego paska menu po scrollowaniu */
+nav.nav-shrink {
+  padding: 5px 10px;
+  transition: padding 0.3s ease;
+}
+``
