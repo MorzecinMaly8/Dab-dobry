@@ -138,5 +138,15 @@
     }
   });
 </script>
+  <script>
+  window.addEventListener('scroll', function() {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) {
+      nav.classList.add('nav-shrink');
+    } else {
+      nav.classList.remove('nav-shrink');
+    }
+  });
+  </script>
 </body>
 </html>
